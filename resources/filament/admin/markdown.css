@@ -1,0 +1,350 @@
+/* ---------------- Headings (h2/h3) with badges ---------------- */
+.prose :is(h2, h3) {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+    display: flex;
+    align-items: center;
+    color: rgb(31 41 55);
+}
+.prose h2 {
+    font-size: 1.125rem;
+}
+.prose h3 {
+    font-size: 1rem;
+}
+.dark .prose :is(h2, h3) {
+    color: rgb(229 231 235);
+}
+
+.prose :is(h2, h3)::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.125rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.875rem;
+    background: rgb(139 92 246);
+}
+.prose :is(h2, h3)[data-type="added"]::before {
+    background: linear-gradient(135deg, rgb(16 185 129), rgb(5 150 105));
+    content: "✨";
+}
+.prose :is(h2, h3)[data-type="fixed"]::before {
+    background: linear-gradient(135deg, rgb(59 130 246), rgb(37 99 235));
+    content: "🔧";
+}
+.prose :is(h2, h3)[data-type="removed"]::before {
+    background: linear-gradient(135deg, rgb(239 68 68), rgb(220 38 38));
+    content: "🗑️";
+}
+.prose :is(h2, h3)[data-type="changed"]::before {
+    background: linear-gradient(135deg, rgb(245 158 11), rgb(217 119 6));
+    content: "📝";
+}
+.prose :is(h2, h3)[data-type="updated"]::before {
+    background: linear-gradient(135deg, rgb(139 92 246), rgb(124 58 237));
+    content: "⬆️";
+}
+
+/* ---------------- Body text / links / images ---------------- */
+.prose p {
+    color: rgb(55 65 81);
+    line-height: 1.7;
+    margin: 0.85rem 0;
+}
+.dark .prose p {
+    color: rgb(209 213 219);
+}
+.prose strong {
+    color: rgb(17 24 39);
+    font-weight: 700;
+}
+.dark .prose strong {
+    color: #fff;
+}
+.prose a {
+    color: rgb(79 70 229);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+.prose a:hover {
+    text-decoration: underline;
+}
+.dark .prose a {
+    color: rgb(165 180 252);
+}
+.prose img {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------- Lists & task lists ---------------- */
+.prose ul,
+.prose ol {
+    margin: 1rem 0 1rem 1rem;
+}
+.prose ul {
+    list-style: none;
+    padding-left: 0;
+}
+.prose ul > li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin: 0.5rem 0;
+    color: rgb(55 65 81);
+}
+.dark .prose ul > li {
+    color: rgb(209 213 219);
+}
+.prose ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 0.375rem;
+    height: 0.375rem;
+    background: rgb(139 92 246);
+    border-radius: 50%;
+}
+.prose ul ul > li::before {
+    background: rgb(196 181 253);
+}
+
+.prose ol {
+    counter-reset: c;
+    list-style: none;
+    padding-left: 0;
+}
+.prose ol > li {
+    counter-increment: c;
+    position: relative;
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+    color: rgb(55 65 81);
+}
+.dark .prose ol > li {
+    color: rgb(209 213 219);
+}
+.prose ol > li::before {
+    content: counter(c);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(139 92 246);
+    color: #fff;
+    border-radius: 9999px;
+    font:
+        600 0.75rem/1 ui-sans-serif,
+        system-ui,
+        Inter;
+}
+
+/* GitHub-style task list checkboxes */
+.prose input[type="checkbox"] {
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgb(203 213 225);
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+}
+.dark .prose input[type="checkbox"] {
+    border-color: rgb(75 85 99);
+    background: rgb(31 41 55);
+}
+.prose input[type="checkbox"]:checked {
+    background: rgb(16 185 129);
+    border-color: rgb(16 185 129);
+}
+.prose input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 0.22rem;
+    top: 0.02rem;
+    width: 0.25rem;
+    height: 0.5rem;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+}
+
+/* ---------------- Blockquotes & HR ---------------- */
+.prose blockquote {
+    border-left: 4px solid rgb(139 92 246);
+    background: rgba(243 232 255 /0.5);
+    padding: 1rem 1.25rem;
+    border-radius: 0.25rem;
+    color: rgb(107 33 168);
+    margin: 1rem 0;
+}
+.dark .prose blockquote {
+    background: rgba(107 33 168 /0.2);
+    color: rgb(196 181 253);
+}
+.prose hr {
+    border: 0;
+    height: 1px;
+    margin: 2rem 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(229 231 235),
+        transparent
+    );
+}
+.dark .prose hr {
+    background: linear-gradient(90deg, transparent, rgb(55 65 81), transparent);
+}
+
+/* ---------------- Inline code ---------------- */
+.prose :not(pre) > code {
+    background: rgb(249 250 251);
+    color: rgb(31 41 55);
+    border: 1px solid rgb(229 231 235);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.85em;
+    font-weight: 500;
+}
+.dark .prose :not(pre) > code {
+    background: rgba(107 33 168 /0.3);
+    color: rgb(196 181 253);
+    border-color: transparent;
+}
+
+/* ---------------- Code blocks ---------------- */
+.md-code {
+    position: relative;
+    margin: 1rem 0;
+}
+.md-code pre {
+    overflow: auto;
+    padding: 2rem 1rem 1rem; /* top padding for badge */
+    border-radius: 0.5rem;
+    border: 1px solid rgb(229 231 235);
+    background: rgb(249 250 251); /* light */
+    color: rgb(17 24 39);
+}
+.dark .md-code pre {
+    background: rgb(31 41 55);
+    border-color: rgb(75 85 99);
+    color: rgb(243 244 246);
+}
+.md-code pre code {
+    background: transparent;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Language badge (UPPERCASE) */
+.md-code[data-lang]::after {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0.35rem;
+    left: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 0.375rem;
+    background: #ffffff;
+    color: #111827;
+    border: 1px solid rgb(229 231 235);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    pointer-events: none;
+}
+.dark .md-code[data-lang]::after {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Copy button */
+.md-code .md-copy {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    border: 1px solid rgb(209 213 219);
+    background: #ffffff;
+    color: #111827;
+}
+.md-code .md-copy:hover {
+    background: rgb(249 250 251);
+}
+.dark .md-code .md-copy {
+    background: rgb(31 41 55);
+    color: #e5e7eb;
+    border-color: rgb(75 85 99);
+}
+
+/* ---------------- Tables ---------------- */
+.md-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 0.5rem;
+}
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 520px;
+    font-size: 0.875rem;
+    border: 1px solid rgb(229 231 235);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+.dark .prose table {
+    border-color: rgb(75 85 99);
+}
+.prose thead {
+    background: rgb(249 250 251);
+}
+.dark .prose thead {
+    background: rgb(31 41 55);
+}
+.prose th,
+.prose td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-top: 1px solid rgb(229 231 235);
+}
+.prose th {
+    font-weight: 600;
+    color: rgb(17 24 39);
+}
+.dark .prose th {
+    color: #fff;
+    border-color: rgb(75 85 99);
+}
+.dark .prose td {
+    border-color: rgb(75 85 99);
+}
+.prose tbody tr:hover {
+    background: rgba(249 250 251 /0.5);
+}
+.dark .prose tbody tr:hover {
+    background: rgba(31 41 55 /0.5);
+}

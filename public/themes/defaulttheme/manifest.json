@@ -1,0 +1,49 @@
+{
+  "_jquery.module-R5Nq7kwZ.js": {
+    "file": "assets/jquery.module-R5Nq7kwZ.js",
+    "name": "jquery.module"
+  },
+  "css/app.css": {
+    "file": "assets/app-CNMDaFfn.css",
+    "src": "css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "js/app.js": {
+    "file": "assets/app-mnB8zqWp.js",
+    "name": "app",
+    "src": "js/app.js",
+    "isEntry": true,
+    "imports": [
+      "js/toastr.js",
+      "_jquery.module-R5Nq7kwZ.js"
+    ]
+  },
+  "js/flowbite.js": {
+    "file": "assets/flowbite-D2-JIPRR.js",
+    "name": "flowbite",
+    "src": "js/flowbite.js",
+    "isEntry": true
+  },
+  "js/jquery.js": {
+    "file": "assets/jquery-Cw4ooHSE.js",
+    "name": "jquery",
+    "src": "js/jquery.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.module-R5Nq7kwZ.js"
+    ]
+  },
+  "js/toastr.js": {
+    "file": "assets/toastr-CE2VWHFW.js",
+    "name": "toastr",
+    "src": "js/toastr.js",
+    "isEntry": true,
+    "imports": [
+      "_jquery.module-R5Nq7kwZ.js"
+    ]
+  }
+}

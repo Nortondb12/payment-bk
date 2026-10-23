@@ -1,0 +1,42 @@
+{
+    "name": "revoltify/permissionify",
+    "description": "Filament support for `spatie/laravel-permission`.",
+    "keywords": [
+        "revoltify",
+        "laravel",
+        "permissionify"
+    ],
+    "homepage": "https://github.com/revoltify/permissionify",
+    "support": {
+        "issues": "https://github.com/revoltify/permissionify/issues",
+        "source": "https://github.com/revoltify/permissionify"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Revoltify Technologies",
+            "email": "info@revoltify.net",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Permissionify\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\Permissionify\\PermissionifyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

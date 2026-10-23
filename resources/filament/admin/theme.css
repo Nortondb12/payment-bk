@@ -1,0 +1,16 @@
+@import "../../../vendor/filament/filament/resources/css/theme.css";
+@import "./markdown.css";
+@import "./calculator.css";
+
+@source "../../../app/Filament";
+@source "../../../resources/views/filament";
+@source "../../../vendor/revoltify";
+@source "../../../vendor/spatie/laravel-passkeys";
+
+.fi-sidebar-nav-groups {
+    row-gap: 0 !important;
+}
+
+.fi-page-has-sub-navigation-top .fi-page-sub-navigation-tabs {
+    @apply flex;
+}

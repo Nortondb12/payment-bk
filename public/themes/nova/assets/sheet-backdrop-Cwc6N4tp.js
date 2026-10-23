@@ -1,0 +1,1 @@
+import{j as o}from"./app-oEDkBHm2.js";import{e as a}from"./button-BjsTbAAb.js";function n({show:i,onClose:t}){return o.jsx("div",{className:a("fixed inset-0 z-40 bg-black/40 transition-opacity duration-[0.25s]",i?"block opacity-100":"hidden opacity-0"),onClick:t,"aria-hidden":"true"})}export{n as S};

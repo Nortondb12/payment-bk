@@ -1,0 +1,25 @@
+{
+    "name": "revoltify/uddoktapay",
+    "description": "Revoltify UddoktaPay Module",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\UddoktaPay\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helpers.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\UddoktaPay\\Providers\\UddoktaPayServiceProvider"
+            ]
+        }
+    }
+}

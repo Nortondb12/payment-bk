@@ -1,0 +1,35 @@
+{
+    "name": "revoltify/smsify",
+    "description": "SMSify is a Laravel package designed to integrate popular Bangladeshi SMS gateways seamlessly.",
+    "homepage": "https://github.com/revoltify/smsify",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0||^12.0||^13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.29.1",
+        "phpstan/phpstan": "^2.1.54",
+        "rector/rector": "^2.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\SMSify\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\SMSify\\SMSifyServiceProvider"
+            ],
+            "aliases": {
+                "SMSify": "Revoltify\\SMSify\\Facades\\SMSify"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

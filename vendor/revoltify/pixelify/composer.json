@@ -1,0 +1,56 @@
+{
+    "name": "revoltify/pixelify",
+    "description": "Laravel package for Facebook Conversion API integration",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Revoltify",
+            "email": "info@revoltify.net"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0||^12.0||^13.0",
+        "illuminate/http": "^11.0||^12.0||^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.9.3",
+        "orchestra/testbench": "^9.16",
+        "pestphp/pest": "^3.8.5",
+        "laravel/pint": "^1.27.1",
+        "driftingly/rector-laravel": "^2.1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Pixelify\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Revoltify\\Pixelify\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\Pixelify\\PixelifyServiceProvider"
+            ],
+            "aliases": {
+                "Pixelify": "Revoltify\\Pixelify\\Facades\\Pixelify"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "phpstan": "vendor/bin/phpstan analyse --verbose --ansi",
+        "pint": "vendor/bin/pint --ansi"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

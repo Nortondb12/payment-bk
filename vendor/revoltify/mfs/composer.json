@@ -1,0 +1,38 @@
+{
+    "name": "revoltify/mfs",
+    "description": "Manage Mobile Financial Services SMS Parser",
+    "license": "MIT",
+    "homepage": "https://github.com/revoltify/mfs",
+    "support": {
+        "issues": "https://github.com/revoltify/mfs/issues",
+        "source": "https://github.com/revoltify/mfs"
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.29.1",
+        "pestphp/pest": "^3.8.6",
+        "phpstan/phpstan": "^2.1.50",
+        "rector/rector": "^2.4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Mfs\\": "src"
+        }
+    },
+    "scripts": {
+        "test": [
+            "pint",
+            "rector",
+            "pest"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

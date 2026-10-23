@@ -1,0 +1,33 @@
+{
+    "name": "revoltify/brandify",
+    "description": "The Revoltify Brand package",
+    "license": "MIT",
+    "homepage": "https://github.com/revoltify/paymently",
+    "support": {
+        "issues": "https://github.com/revoltify/paymently/issues",
+        "source": "https://github.com/revoltify/paymently"
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Brandify\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\Brandify\\BrandifyServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

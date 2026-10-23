@@ -1,0 +1,35 @@
+{
+    "name": "revoltify/notificationify",
+    "description": "A minimal Laravel package for dynamic, model-driven notification channel system",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "notifications",
+        "channels",
+        "dynamic"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/revoltify/support"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Notificationify\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\Notificationify\\NotificationifyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

@@ -1,0 +1,22 @@
+{
+    "name": "revoltify/addon",
+    "description": "Revoltify Addon Module",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Revoltify\\Addon\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Revoltify\\Addon\\Providers\\AddonServiceProvider"
+            ]
+        }
+    }
+}

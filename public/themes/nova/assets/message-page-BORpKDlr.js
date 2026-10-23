@@ -1,0 +1,1 @@
+import{j as a}from"./app-oEDkBHm2.js";import{R as n}from"./result-card-DbbFGRdJ.js";import{b as i}from"./button-BjsTbAAb.js";function l({pageTitle:e,heading:r,message:o,returnUrl:t}){const s=i();return a.jsx(n,{pageTitle:e,scope:"checkout",tone:"error",title:r,description:o,action:t?{href:t,label:s("result.return_to_merchant")}:null})}export{l as M};
